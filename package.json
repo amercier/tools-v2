@@ -39,7 +39,8 @@
     "jest-extended": "^0.11.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.1.0",
-    "react-is": "^16.13.1"
+    "react-is": "^16.13.1",
+    "react-test-renderer": "^16.13.1"
   },
   "husky": {
     "hooks": {
