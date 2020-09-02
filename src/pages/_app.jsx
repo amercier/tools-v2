@@ -1,10 +1,9 @@
-import { Container } from 'next/app'
 import Head from 'next/head'
 
 export default function App({ Component = null, pageProps = {} }) {
   // Exceptionally allow spreading because it's using Next.js API.
   return (
-    <Container>
+    <>
       <Head>
         <link
           rel="stylesheet"
@@ -31,6 +30,6 @@ export default function App({ Component = null, pageProps = {} }) {
           box-sizing: border-box;
         }
       `}</style>
-    </Container>
+    </>
   )
 }
