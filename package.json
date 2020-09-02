@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "eslint --ext js,jsx,ts,tsx .",
     "start": "next start",
     "format": "prettier --ignore-path .gitignore --check .",
     "lint": "eslint --ext js,jsx,ts,tsx .",

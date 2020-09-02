@@ -8,6 +8,7 @@ module.exports = {
         paths: [
           {
             name: 'react',
+            importNames: ['default'],
             message: 'Importing React is not needed, please remove.',
           },
         ],
