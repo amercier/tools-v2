@@ -1,8 +1,6 @@
 import { Container } from 'next/app'
 import Head from 'next/head'
 
-import '../styles/globals.css'
-
 export default function App({ Component = null, pageProps = {} }) {
   // Exceptionally allow spreading because it's using Next.js API.
   return (
@@ -16,6 +14,23 @@ export default function App({ Component = null, pageProps = {} }) {
 
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Component {...pageProps} />
+
+      <style global jsx>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
     </Container>
   )
 }
