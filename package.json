@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --ignore-path .gitignore --check .",
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -48,8 +51,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,html,md,mdx,yml,yaml}": [
-      "prettier"
+    "*.{css,html,md,mdx,yml,yaml}": [
+      "prettier --check"
     ],
     "*.{js,jsx,ts,tsx}": [
       "eslint"
