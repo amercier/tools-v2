@@ -1,4 +1,5 @@
 module.exports = {
+  extends: ['plugin:react-hooks/recommended'],
   rules: {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -8,9 +9,16 @@ module.exports = {
         paths: [
           {
             name: 'react',
+            importNames: ['default'],
             message: 'Importing React is not needed, please remove.',
           },
         ],
+      },
+    ],
+    'react-hooks/exhaustive-deps': [
+      'error',
+      {
+        additionalHooks: 'use[A-Z].*',
       },
     ],
   },
