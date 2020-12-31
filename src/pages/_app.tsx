@@ -1,6 +1,8 @@
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { FC } from 'react'
 
-export default function App({ Component = null, pageProps = {} }) {
+const App: FC<AppProps> = ({ Component, pageProps = {} }) => {
   // Exceptionally allow spreading because it's using Next.js API.
   return (
     <>
@@ -39,3 +41,5 @@ export default function App({ Component = null, pageProps = {} }) {
     </>
   )
 }
+
+export default App

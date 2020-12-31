@@ -1,13 +1,18 @@
 import cn from 'classnames'
+import { FC, PropsWithChildren } from 'react'
 
-/**
- * @param {Object} props
- * @param {number} [props.columns]
- * @param {string} [props.gap]
- * @param {string} [props.className]
- * @returns {import('react').ReactElement}
- */
-export default function Grid({ columns = 1, gap = '0', className, children }) {
+interface GridProps {
+  columns?: number
+  gap?: string
+  className?: string
+}
+
+const Grid: FC<PropsWithChildren<GridProps>> = ({
+  columns = 1,
+  gap = '0',
+  className,
+  children,
+}) => {
   return (
     <div className={cn('grid', className)}>
       {children}
@@ -23,3 +28,5 @@ export default function Grid({ columns = 1, gap = '0', className, children }) {
     </div>
   )
 }
+
+export default Grid

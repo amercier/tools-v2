@@ -1,18 +1,13 @@
 import search from '@jukben/emoji-search'
 import Head from 'next/head'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import CharacterCopyButton from '../components/CharacterCopyButton'
 import Grid from '../components/Grid'
 import SearchBar from '../components/SearchBar'
 import { useMediaQuerySwitch } from '../hooks'
 import DefaultLayout from '../layouts/DefaultLayout'
 
-/**
- * @param {string} query
- * @param {number?} maxLimit
- * @return {Character[]}
- */
-function searchUnicodeCharacters(query, maxLimit = 48) {
+function searchUnicodeCharacters(query: string, maxLimit: number = 48) {
   return search(query)
     .slice(0, maxLimit)
     .map((character) => ({
@@ -21,12 +16,9 @@ function searchUnicodeCharacters(query, maxLimit = 48) {
     }))
 }
 
-/**
- * @returns {import('react').ReactElement}
- */
-export default function EmojiPickerPage() {
+const EmojiPickerPage: FC<{}> = () => {
   const [filter, setFilter] = useState('')
-  const rowItems = useMediaQuerySwitch({
+  const rowItems = useMediaQuerySwitch<number>({
     small: 2,
     medium: 3,
     large: 4,
@@ -45,11 +37,7 @@ export default function EmojiPickerPage() {
       </Head>
 
       <div className="searchBar">
-        <SearchBar
-          placeholder="Filter…"
-          autoFocus
-          onChange={(event) => setFilter(event.target.value)}
-        />
+        <SearchBar placeholder="Filter…" autoFocus onChange={setFilter} />
       </div>
 
       <Grid columns={rowItems}>
@@ -67,3 +55,5 @@ export default function EmojiPickerPage() {
     </DefaultLayout>
   )
 }
+
+export default EmojiPickerPage

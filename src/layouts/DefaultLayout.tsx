@@ -1,7 +1,15 @@
 import { Container, CssBaseline, Typography } from '@material-ui/core'
 import Head from 'next/head'
+import { FC, PropsWithChildren } from 'react'
 
-export default function DefaultLayout({ title, children }) {
+interface DefaultLayoutProps {
+  title: string
+}
+
+const DefaultLayout: FC<PropsWithChildren<DefaultLayoutProps>> = ({
+  title,
+  children,
+}) => {
   return (
     <>
       <CssBaseline />
@@ -33,3 +41,5 @@ export default function DefaultLayout({ title, children }) {
     </>
   )
 }
+
+export default DefaultLayout
