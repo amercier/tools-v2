@@ -1,12 +1,15 @@
+import { FC } from 'react'
 import CopyButton from './CopyButton'
 
-/**
- * @param {Object} props
- * @param {string} props.name
- * @param {string} props.symbol
- * @return {import('react').ReactElement}
- */
-export default function CharacterCopyButton({ name, symbol }) {
+interface CharacterCopyButtonProps {
+  name: string
+  symbol: string
+}
+
+const CharacterCopyButton: FC<CharacterCopyButtonProps> = ({
+  name,
+  symbol,
+}) => {
   return (
     <CopyButton title={name} text={symbol}>
       <div className="character">
@@ -49,3 +52,5 @@ export default function CharacterCopyButton({ name, symbol }) {
     </CopyButton>
   )
 }
+
+export default CharacterCopyButton

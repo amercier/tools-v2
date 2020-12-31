@@ -1,17 +1,18 @@
 import babelParser from 'prettier/parser-babel'
 import { format } from 'prettier/standalone'
+import { FC } from 'react'
 import CodeFormatter from '../components/CodeFormatter'
 import DefaultLayout from '../layouts/DefaultLayout'
 
-const formatJSON = (input) =>
+const formatJSON = (input: string) =>
   input
     ? format(input, {
-      parser: 'json',
-      plugins: [babelParser],
-    })
+        parser: 'json',
+        plugins: [babelParser],
+      })
     : ''
 
-export default function JsonFormatterPage() {
+const JsonFormatterPage: FC<{}> = () => {
   return (
     <DefaultLayout title="JSON Formatter">
       <CodeFormatter
@@ -23,3 +24,5 @@ export default function JsonFormatterPage() {
     </DefaultLayout>
   )
 }
+
+export default JsonFormatterPage

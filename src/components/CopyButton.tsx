@@ -1,17 +1,33 @@
-import { Button, Snackbar, ThemeProvider } from '@material-ui/core'
+import { Button, ButtonProps, Snackbar, ThemeProvider } from '@material-ui/core'
 import { Alert } from '@material-ui/lab'
+import { FC, PropsWithChildren, ReactElement } from 'react'
 import useClipboard from 'react-use-clipboard'
 
-const WithTheme = ({ theme, children }) =>
-  theme ? <ThemeProvider theme={theme}>{children}</ThemeProvider> : children
+interface WithThemeProps {
+  theme?: Object
+}
 
-/**
- * @param {Object} props
- * @param {string} props.text
- * @param {Object} [props.theme]
- * @returns {import('react').ReactElement}
- */
-export default function Copy({ text, theme, children, ...props }) {
+const WithTheme: FC<PropsWithChildren<WithThemeProps>> = ({
+  theme,
+  children,
+}) =>
+  theme ? (
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  ) : (
+    (children as ReactElement<any, any>)
+  )
+
+interface CopyButtonProps {
+  text: string
+  theme?: Object
+}
+
+const CopyButton: FC<PropsWithChildren<CopyButtonProps & ButtonProps>> = ({
+  text,
+  theme,
+  children,
+  ...props
+}) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const [isCopied, setCopied] = useClipboard(text, {
     successDuration: 2000,
@@ -37,3 +53,5 @@ export default function Copy({ text, theme, children, ...props }) {
     </>
   )
 }
+
+export default CopyButton

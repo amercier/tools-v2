@@ -8,8 +8,8 @@ import { useEffect, useRef } from 'react'
  * @param {boolean?} enabled
  * @returns {import('react').Ref}
  */
-export function useForceAutofocus(enabled = true) {
-  const inputRef = useRef()
+export function useForceAutofocus(enabled: boolean = true) {
+  const inputRef = useRef<HTMLElement>()
 
   useEffect(() => {
     if (enabled && inputRef.current) {
@@ -21,17 +21,18 @@ export function useForceAutofocus(enabled = true) {
 }
 
 /**
- * @param {Object} values
- * @param {unknown} values.small
- * @param {unknown} values.medium
- * @param {unknown} values.large
- * @param {unknown} values.extraLarge
+ * Returns one of the given value, depending on the current viewport width.
  */
-export function useMediaQuerySwitch({
+export function useMediaQuerySwitch<T = unknown>({
   small,
   medium = small,
   large = medium,
   extraLarge = large,
+}: {
+  small: T
+  medium?: T
+  large?: T
+  extraLarge?: T
 }) {
   const { breakpoints } = useTheme()
   const matchesMedium = useMediaQuery(breakpoints.up('sm'))

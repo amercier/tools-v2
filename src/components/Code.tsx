@@ -1,4 +1,5 @@
 import { createMuiTheme } from '@material-ui/core'
+import { FC, PropsWithChildren } from 'react'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import json from 'react-syntax-highlighter/dist/cjs/languages/hljs/json'
 import atomOneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark'
@@ -12,13 +13,13 @@ const darkTheme = createMuiTheme({
   },
 })
 
-/**
- * @param {Object} props
- * @param {string} props.language
- * @param {Error} [props.error]
- * @returns {import('react').ReactElement}
- */
-export default function Code({ language, error, children }) {
+interface CodeProps {
+  language: string
+  error?: Error | null
+  children?: string | null
+}
+
+const Code: FC<CodeProps> = ({ language, error, children }) => {
   const text = error ? error.message : children
   return (
     <div className="container">
@@ -36,7 +37,7 @@ export default function Code({ language, error, children }) {
 
       <div className="copyButton">
         <CopyButton
-          text={text}
+          text={text || ''}
           theme={darkTheme}
           disabled={!children || !!error}
         >
@@ -58,3 +59,5 @@ export default function Code({ language, error, children }) {
     </div>
   )
 }
+
+export default Code

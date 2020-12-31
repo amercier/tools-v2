@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import Home from '.'
 
 export default {
@@ -5,4 +6,4 @@ export default {
   component: Home,
 }
 
-export const Default = () => <Home />
+export const Default: FC<{}> = () => <Home />

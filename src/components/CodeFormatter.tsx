@@ -1,32 +1,31 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { useMediaQuerySwitch } from '../hooks'
 import Code from './Code'
 import CodeInput from './CodeInput'
 import Grid from './Grid'
 
-/**
- * @param {Object} props
- * @param {string} props.language
- * @param {boolean} [props.autoFocus]
- * @param {string} [props.helperText]
- * @param {(input: string) => string | Promise<string>} props.format
- * @returns {import('react').ReactElement}
- */
-export default function CodeFormatter({
+interface CodeFormatterProps {
+  language: string
+  autoFocus?: boolean
+  helperText?: string
+  format?: (input: string) => string | Promise<string>
+}
+
+const CodeFormatter: FC<CodeFormatterProps> = ({
   language,
   autoFocus,
   helperText,
   format = (input) => input,
-}) {
+}) => {
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
+  const [error, setError] = useState(null)
 
-  async function handleInputChange(value) {
+  async function handleInputChange(value: string) {
     setInput(value)
     setLoading(true)
-    setError('')
+    setError(null)
     setOutput('')
 
     let formatted
@@ -41,12 +40,12 @@ export default function CodeFormatter({
     setLoading(false)
   }
 
-  const columns = useMediaQuerySwitch({
+  const columns = useMediaQuerySwitch<number>({
     small: 1,
     large: 2,
   })
 
-  const maxRows = useMediaQuerySwitch({
+  const maxRows = useMediaQuerySwitch<number>({
     small: 20,
     large: 50,
   })
@@ -77,3 +76,5 @@ export default function CodeFormatter({
     </div>
   )
 }
+
+export default CodeFormatter
