@@ -22,10 +22,17 @@ export function useForceAutofocus(enabled = true) {
 
 /**
  * @param {Object} values
- * @param {Object} values
- * @param {Object} values
+ * @param {unknown} values.small
+ * @param {unknown} values.medium
+ * @param {unknown} values.large
+ * @param {unknown} values.extraLarge
  */
-export function useMediaQuerySwitch({ small, medium, large, extraLarge }) {
+export function useMediaQuerySwitch({
+  small,
+  medium = small,
+  large = medium,
+  extraLarge = large,
+}) {
   const { breakpoints } = useTheme()
   const matchesMedium = useMediaQuery(breakpoints.up('sm'))
   const matchesLarge = useMediaQuery(breakpoints.up('md'))
