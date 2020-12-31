@@ -21,12 +21,12 @@ export default function DefaultLayout({ title, children }) {
 
         <style jsx>{`
           .root {
-            text-align: center;
             padding-top: 2rem;
           }
 
           .title {
             margin-bottom: 2rem;
+            text-align: center;
           }
         `}</style>
       </Container>
