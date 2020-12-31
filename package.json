@@ -25,7 +25,6 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "classnames": "^2.2.6",
-    "lodash": "^4.17.20",
     "next": "^10.0.4",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
