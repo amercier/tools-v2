@@ -33,7 +33,7 @@ export default function EmojiPickerPage() {
     extraLarge: 5,
   })
 
-  const characters = searchUnicodeCharacters(filter, rowItems * 24)
+  const characters = searchUnicodeCharacters(filter, rowItems * 10)
 
   return (
     <DefaultLayout title="Emoji Picker">
