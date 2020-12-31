@@ -17,11 +17,13 @@
   "include": [
     "next-env.d.ts",
     "**/.*.js",
+    "**/.*.jsx",
+    "**/.*.ts",
+    "**/.*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "**/.*.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [".next", "coverage", "node_modules"]
 }

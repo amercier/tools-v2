@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Home from '.'
+import Home from './HomePage'
 
 export default {
   title: 'Pages/Home',

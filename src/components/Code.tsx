@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core'
-import { FC, PropsWithChildren } from 'react'
+import { FC } from 'react'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import json from 'react-syntax-highlighter/dist/cjs/languages/hljs/json'
 import atomOneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark'

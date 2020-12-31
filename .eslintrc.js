@@ -5,6 +5,7 @@ module.exports = {
 
   rules: {
     // TODO Remove once integrated in eslint-config-amercier
+    'no-restricted-exports': 'off',
     'react/require-default-props': 'off',
   },
 

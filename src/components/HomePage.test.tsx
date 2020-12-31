@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Default } from './index.stories'
+import { Default } from './HomePage.stories'
 
 test('Default', () => {
   render(<Default />)

@@ -7,5 +7,6 @@ script:
   - yarn format
   - yarn lint
   - yarn test --coverage
+  - yarn build
 after_script:
   - bash <(curl -s https://codecov.io/bash)
