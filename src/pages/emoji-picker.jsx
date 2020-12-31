@@ -2,6 +2,7 @@ import search from '@jukben/emoji-search'
 import Head from 'next/head'
 import { useState } from 'react'
 import CharacterCopyButton from '../components/CharacterCopyButton'
+import Grid from '../components/Grid'
 import SearchBar from '../components/SearchBar'
 import { useMediaQuerySwitch } from '../hooks'
 import DefaultLayout from '../layouts/DefaultLayout'
@@ -51,22 +52,16 @@ export default function EmojiPickerPage() {
         />
       </div>
 
-      <div className="characters">
+      <Grid columns={rowItems}>
         {characters.map(({ name, symbol }) => (
           <CharacterCopyButton key={symbol} name={name} symbol={symbol} />
         ))}
-      </div>
+      </Grid>
 
       <style jsx>{`
         .searchBar {
           margin: 0 auto 3rem auto;
           max-width: 40rem;
-        }
-
-        .characters {
-          display: grid;
-          gap: 0;
-          grid-template-columns: repeat(${rowItems}, 1fr);
         }
       `}</style>
     </DefaultLayout>
