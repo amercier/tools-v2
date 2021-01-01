@@ -75,11 +75,8 @@
     }
   },
   "lint-staged": {
-    "*.{css,html,md,mdx,yml,yaml}": [
+    "*.{css,json,jsx?,html,md,mdx,tsx?,ya?ml}": [
       "prettier --check"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint"
     ]
   }
 }
