@@ -21,7 +21,9 @@ const DefaultLayout: FC<PropsWithChildren<DefaultLayoutProps>> = ({
       <Container maxWidth="md">
         <div className="root">
           <div className="title">
-            <Typography variant="h1">{title}</Typography>
+            <Typography variant="h2" component="h1">
+              {title}
+            </Typography>
           </div>
 
           <div>{children}</div>
