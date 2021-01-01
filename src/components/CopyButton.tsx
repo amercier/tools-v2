@@ -47,9 +47,21 @@ const CopyButton: FC<PropsWithChildren<CopyButtonProps & ButtonProps>> = ({
         open={isCopied}
       >
         <Alert severity="success">
-          Copied to clipboard{text.length < 10 ? `: &quot;${text}&quot;` : ''}
+          Copied to clipboard
+          {text.length < 10 && (
+            <>
+              : <span className="copied">{text}</span>
+            </>
+          )}
         </Alert>
       </Snackbar>
+
+      <style jsx>{`
+        .copied {
+          line-height: 1.2rem;
+          font-family: 'Noto Sans';
+        }
+      `}</style>
     </>
   )
 }
