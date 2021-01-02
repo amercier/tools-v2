@@ -14,7 +14,7 @@ const darkTheme = createMuiTheme({
 })
 
 interface CodeProps {
-  language: string
+  language: 'json'
   error?: Error | null
   children?: string | null
 }
