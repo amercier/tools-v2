@@ -1761,20 +1761,20 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@next/env@10.0.5-canary.8":
-  version "10.0.5-canary.8"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.0.5-canary.8.tgz#3596cb09f308532b4d663d44b11acb270a5d917e"
-  integrity sha512-SySXf7keLB/8qzet8WbI6yPrkUvYREpHdjRpq+f5EIlP8vVtJAOIgiJ895CoMYQ/nD9lmN++PTwinkhFASToBg==
+"@next/env@10.0.5-canary.9":
+  version "10.0.5-canary.9"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.0.5-canary.9.tgz#36dc289aa9bfe3969344e2f471001878acbc5bcd"
+  integrity sha512-ZpormQmmcW1SLqkIz0aTYyKj7Pn2nddtjgUYDhvZxfOdcxWWahcTQ/DI9ofTqu6la8kegMpkCheXh8E5u3STdw==
 
-"@next/polyfill-module@10.0.5-canary.8":
-  version "10.0.5-canary.8"
-  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.0.5-canary.8.tgz#29fc25775c93d8713680d94e9cc83f46b7e80ff5"
-  integrity sha512-zUQD2KQu/Ki9WRzugSd5e7k95g8C4SuT/LoVvzD9sqHBmsRBF3Pzcz177nO2k0olHGfDLK43CU9QbLJAbGDyOA==
+"@next/polyfill-module@10.0.5-canary.9":
+  version "10.0.5-canary.9"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.0.5-canary.9.tgz#a65b8d89bde833d4fbfb46c505791a4ead253dc1"
+  integrity sha512-nP5Y8JTKz+dvH1ihGTXC+PIJTNFYD/jm6eYeT9pzpgxSihL6BCw6A2bz9xfqXY6IO+K9VQTssKQIJXZEZSlTCA==
 
-"@next/react-dev-overlay@10.0.5-canary.8":
-  version "10.0.5-canary.8"
-  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.0.5-canary.8.tgz#3414325ed6b1e3124156e3edaad2dc2639a80ebf"
-  integrity sha512-6dF34pjjEMz0x5XDp1LMNmsvhVP2oE8ugfv6DVvaOMN3j9TtfNhc76KAKvqFM4XnJYM5Y+udNy+4ADBQhtuTog==
+"@next/react-dev-overlay@10.0.5-canary.9":
+  version "10.0.5-canary.9"
+  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.0.5-canary.9.tgz#c850bf0ae96372edb7f28fa9137d3c5e6b25a900"
+  integrity sha512-rYYFLPTo7g7jX3/z8iypOmxF2I5CGEPY61QjsFrhOMrguFq7t/pfcTr1rAb1se2fx4WIDz/8nWbhAWJjYSO83Q==
   dependencies:
     "@babel/code-frame" "7.12.11"
     anser "1.4.9"
@@ -1788,10 +1788,10 @@
     stacktrace-parser "0.1.10"
     strip-ansi "6.0.0"
 
-"@next/react-refresh-utils@10.0.5-canary.8":
-  version "10.0.5-canary.8"
-  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.0.5-canary.8.tgz#301fc883be8ef6c7eca4a6811d12506ce8fca2a8"
-  integrity sha512-KzDG0K7GyP6sEPj5nnzzo6CwLG2AjZQ4UsfX2SO9uwrojvl00CumAvJtlWFWdRTk/Xs2TSWsISdPHW4Zc4Tbpw==
+"@next/react-refresh-utils@10.0.5-canary.9":
+  version "10.0.5-canary.9"
+  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.0.5-canary.9.tgz#f5b01a243ce7c4e44b08131dcff523b926a5189f"
+  integrity sha512-zL27vjlXn7xGnrlLru8k1xz+RukHM7HXYd6LqLqELHVqczorRpK0AqA4kSKcxbdiXG7Vvq+ERAFh24f72exk4g==
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -9717,18 +9717,18 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@^10.0.5-canary.8:
-  version "10.0.5-canary.8"
-  resolved "https://registry.yarnpkg.com/next/-/next-10.0.5-canary.8.tgz#fcf8ae75fa814c0b3f5a4eee92c55aa63bb1b3f4"
-  integrity sha512-UuQeHWDitr8bln4RWjmE8vWJPf7raagdjIUDENmVVurF4D85ZtPbbxTNq7dKKtPbGBlcvi/Z50aiAz0wGolO9w==
+next@^10.0.5-canary.9:
+  version "10.0.5-canary.9"
+  resolved "https://registry.yarnpkg.com/next/-/next-10.0.5-canary.9.tgz#e453c064a8c5de003093ed6c5ae22f81715e77e4"
+  integrity sha512-/OcexoVCuycBvSkCfOjFWbD2nslIWvk9TTZ6dsyEUSFYzzQj/yzHJ6m6Di6XeX33qlFn9in64adyKPgBzCq1Ug==
   dependencies:
     "@ampproject/toolbox-optimizer" "2.7.1-alpha.0"
     "@babel/runtime" "7.12.5"
     "@hapi/accept" "5.0.1"
-    "@next/env" "10.0.5-canary.8"
-    "@next/polyfill-module" "10.0.5-canary.8"
-    "@next/react-dev-overlay" "10.0.5-canary.8"
-    "@next/react-refresh-utils" "10.0.5-canary.8"
+    "@next/env" "10.0.5-canary.9"
+    "@next/polyfill-module" "10.0.5-canary.9"
+    "@next/react-dev-overlay" "10.0.5-canary.9"
+    "@next/react-refresh-utils" "10.0.5-canary.9"
     "@opentelemetry/api" "0.14.0"
     ast-types "0.13.2"
     babel-plugin-transform-define "2.0.0"
